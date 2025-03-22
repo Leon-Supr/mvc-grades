@@ -7,7 +7,7 @@ namespace mvc_grades.Data
     {
         public MySQLDbContext(
             DbContextOptions<MySQLDbContext> options) : base(options) { }
-
+            public DbSet<Act> Activities { get; set; }
         public DbSet<Subject> Subjects { get; set; }
         
         // protected override void OnModelCreating(ModelBuilder modelBuilder)

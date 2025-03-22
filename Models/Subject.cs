@@ -4,5 +4,6 @@ namespace mvc_grades.Models
     {
         public int id { get; set; }
         public string name { get; set; }
+        public virtual ICollection<Act> Activities { get; set; }
     }
 }
