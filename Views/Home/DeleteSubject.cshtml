@@ -1,0 +1,13 @@
+@model Subject
+
+<h2>Detalles de la materia a eliminar</h2>
+
+<table>
+    <tr><th>Atributo</th><th>Valor</th></tr>
+    <tr><td>ID</td><td>@Model.id</td></tr>
+    <tr><td>Nombre</td><td>@Model.name</td></tr>
+</table>
+
+<form method="POST" asp-action="DeleteSubject">
+    <button type="submit">¿Desea Eliminar la materia?</button>
+</form>

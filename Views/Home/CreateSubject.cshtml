@@ -1,0 +1,8 @@
+@model Subject //Importamos variable de tipo Subject
+@* Accedemos al modelo considerando que es una lista *@
+
+<FORM method="POST" action="CreateSubject">
+    <LABEL>Nombre: </LABEL>
+    <INPUT asp-for="name" />
+    <button type="submit">Enviar</button>
+</FORM>

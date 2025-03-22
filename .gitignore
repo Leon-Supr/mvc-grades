@@ -1,0 +1,30 @@
+# Archivos y carpetas de compilación
+bin/
+bin/Debug/
+bin/Release/
+obj/
+
+# Configuraciones de desarrollo (pueden contener credenciales o datos sensibles)
+appsettings.Development.json
+
+# Archivos específicos del usuario y del entorno
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs y archivos de depuración
+*.log
+*.tlog
+
+# Paquetes y dependencias
+packages/
+node_modules/
+
+# Archivos de caché de Visual Studio
+.vs/
+Thumbs.db
+
+# Archivos generados dinámicamente en wwwroot
+wwwroot/

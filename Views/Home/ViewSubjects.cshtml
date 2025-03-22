@@ -1,0 +1,9 @@
+@model List<mvc_grades.Models.Subject>
+@using mvc_grades.Models
+
+@foreach (var subject in @Model)
+{
+    <h2>Materias</h2>
+    <p><strong>ID:</strong> @subject.id</p>
+    <p><strong>Nombre:</strong> @subject.name</p>
+}

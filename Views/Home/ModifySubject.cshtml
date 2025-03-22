@@ -1,0 +1,11 @@
+@model Subject //Importamos variable de tipo Subject
+@* Accedemos al modelo considerando que es una lista *@
+
+<FORM method="POST" action="ModifySubject">
+    <label>ID: </label>
+    <input asp-for="id" readonly />
+    <span asp-asp-validation-for="id" style="color:red"></span><br />
+    <LABEL>Nombre: </LABEL>
+    <INPUT asp-for="name" />
+    <button type="submit">Enviar</button>
+</FORM>
