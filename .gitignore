@@ -28,3 +28,4 @@ Thumbs.db
 
 # Archivos generados dinámicamente en wwwroot
 wwwroot/
+Migrations/

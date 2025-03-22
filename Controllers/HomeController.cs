@@ -131,6 +131,23 @@ public class HomeController : Controller
 
     //Fin de mi código
 
+    //ACtividades
+    public async Task<IActionResult> Details(int id)
+    {
+        // Buscar la materia e incluir sus actividades
+        var subject = await _context.Subjects
+            .Include(s => s.Activities)  // Incluir las actividades asociadas
+            .FirstOrDefaultAsync(s => s.id == id);  // Buscar por Id
+
+        if (subject == null)
+        {
+            return NotFound();  // Si no se encuentra la materia
+        }
+
+        return View(subject);  // Pasar la materia con sus actividades a la vista
+    }
+
+
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

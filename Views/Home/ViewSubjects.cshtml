@@ -1,9 +1,15 @@
 @model List<mvc_grades.Models.Subject>
 @using mvc_grades.Models
 
+<h2>Materias</h2>
 @foreach (var subject in @Model)
 {
-    <h2>Materias</h2>
     <p><strong>ID:</strong> @subject.id</p>
     <p><strong>Nombre:</strong> @subject.name</p>
+    @* <a href="@Url.Action("Details", "Home", new { id = subject.id })">Ver detalles</a> *@
+    <form asp-action="Details" asp-controller="Home" method="get">
+        <input type="hidden" name="id" value="@subject.id" />
+        <button type="submit" class="btn btn-primary">Ver detalles</button>
+    </form>
+    <br/>
 }

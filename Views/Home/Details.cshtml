@@ -1,0 +1,31 @@
+@model mvc_grades.Models.Subject
+
+<h2>Detalles de la Materia: @Model.name</h2>
+
+<h3>Actividades</h3>
+@if (Model.Activities != null && Model.Activities.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Calificación</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var activity in Model.Activities)
+            {
+                <tr>
+                    <td>@activity.type</td>
+                    <td>@activity.grade</td>
+                    <td>@activity.date.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay actividades asociadas a esta materia.</p>
+}
