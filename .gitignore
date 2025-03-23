@@ -26,6 +26,6 @@ node_modules/
 .vs/
 Thumbs.db
 
-# Archivos generados dinámicamente en wwwroot
+# Archivos generados dinámicamente
 wwwroot/
 Migrations/

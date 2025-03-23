@@ -141,14 +141,11 @@ public class HomeController : Controller
 
         if (subject == null)
         {
-            return NotFound();  // Si no se encuentra la materia
+            return NotFound(); 
         }
 
         return View(subject);  // Pasar la materia con sus actividades a la vista
     }
-
-
-
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
